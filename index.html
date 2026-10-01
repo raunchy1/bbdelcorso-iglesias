@@ -1,0 +1,411 @@
+<!-- direzione: b&b camera | palette: Lino Grezzo | fonti: Cormorant Garamond -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>B&B Del Corso — Iglesias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --fondo: #EFE8DA;
+      --testo: #2E2A24;
+      --accento: #8C7A5B;
+      --secondario: #4F6B58;
+      --bianco: #FAF8F5;
+      --bordo: rgba(46, 42, 36, 0.12);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: var(--fondo);
+      color: var(--testo);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 19px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    .draft-badge {
+      background-color: var(--testo);
+      color: var(--fondo);
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 8px 16px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .container {
+      width: 100%;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    /* 1. HERO */
+    .hero {
+      padding: 60px 0 50px;
+      text-align: center;
+    }
+    .hero-eyebrow {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--secondario);
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: 46px;
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+    }
+    .hero-fact {
+      font-size: 21px;
+      max-width: 580px;
+      margin: 0 auto 32px;
+      color: #4A443B;
+      font-style: italic;
+    }
+    .cta-btn {
+      display: inline-block;
+      background-color: var(--secondario);
+      color: var(--bianco);
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 15px 32px;
+      border-radius: 2px;
+      transition: background-color 0.2s ease;
+    }
+    .cta-btn:hover {
+      background-color: #3C5444;
+    }
+    .hero-img-wrap {
+      margin-top: 40px;
+      border: 1px solid var(--bordo);
+      background-color: var(--bianco);
+      padding: 10px;
+    }
+    .hero-img-wrap img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* SECTION TITLES */
+    .section-title {
+      font-size: 32px;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 36px;
+      position: relative;
+    }
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--accento);
+      margin: 14px auto 0;
+    }
+
+    /* 2. SERVIZI */
+    .servizi {
+      padding: 60px 0;
+      border-top: 1px solid var(--bordo);
+    }
+    .servizi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .servizio-item {
+      background: var(--bianco);
+      border: 1px solid var(--bordo);
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+    }
+    .servizio-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 16px;
+    }
+    .servizio-item h3 {
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 8px;
+      line-height: 1.25;
+    }
+    .servizio-item p {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 14px;
+      color: #555047;
+      line-height: 1.5;
+    }
+
+    /* 3. DALLA LORO PAGINA */
+    .galleria {
+      padding: 60px 0;
+      border-top: 1px solid var(--bordo);
+    }
+    .galleria-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .galleria-item {
+      background: var(--bianco);
+      border: 1px solid var(--bordo);
+      padding: 12px;
+    }
+    .galleria-item img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 12px;
+    }
+    .galleria-item figcaption {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 13px;
+      color: #665F54;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    /* 4. INFO PRATICHE */
+    .info {
+      padding: 60px 0;
+      border-top: 1px solid var(--bordo);
+    }
+    .info-box {
+      background: var(--bianco);
+      border: 1px solid var(--bordo);
+      padding: 36px 32px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+    .info-col h3 {
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 12px;
+      color: var(--secondario);
+    }
+    .info-list {
+      list-style: none;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #4A443B;
+    }
+    .info-list li strong {
+      color: var(--testo);
+    }
+    .maps-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--secondario);
+      font-weight: 500;
+      text-decoration: underline;
+      font-size: 14px;
+    }
+
+    /* 5. CTA FINALE */
+    .cta-finale {
+      padding: 70px 0 90px;
+      text-align: center;
+      border-top: 1px solid var(--bordo);
+    }
+    .cta-finale h2 {
+      font-size: 34px;
+      font-weight: 300;
+      margin-bottom: 14px;
+    }
+    .cta-finale p {
+      font-size: 18px;
+      color: #555047;
+      max-width: 500px;
+      margin: 0 auto 28px;
+    }
+    
+    footer {
+      border-top: 1px solid var(--bordo);
+      padding: 24px 0;
+      text-align: center;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 12px;
+      color: #8C8476;
+    }
+
+    /* RESPONSIVE 375px */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 40px 0 32px;
+      }
+      .hero h1 {
+        font-size: 34px;
+      }
+      .hero-fact {
+        font-size: 18px;
+      }
+      .hero-img-wrap img {
+        height: 280px;
+      }
+      .servizi-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .galleria-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .galleria-item img {
+        height: 230px;
+      }
+      .info-box {
+        grid-template-columns: 1fr;
+        padding: 24px;
+        gap: 24px;
+      }
+      .cta-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BANNER OBBLIGATORIO -->
+  <div class="draft-badge">Bozza gratuita, non pubblicata</div>
+
+  <!-- 1. HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-eyebrow">Ospitalità nel Centro Storico • Iglesias</div>
+      <h1>B&amp;B Del Corso</h1>
+      <p class="hero-fact">Due camere con affaccio su Corso Matteotti, a pochi passi da Piazza Sella.</p>
+      <a class="cta-btn" href="https://wa.me/393669524375?text=Salve,%20vorrei%20informazioni%20sulla%20disponibilit%C3%A0%20delle%20camere%20al%20B%26B%20Del%20Corso">Scrivici su WhatsApp</a>
+      
+      <div class="hero-img-wrap">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/643211763.jpg?k=700cea5bd2bee8ee356b5546bd32cf3966955336ab6cc8b15dca3beb2a6174ae&o=&hp=1" alt="Camera matrimoniale con arredi in legno e balcone">
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SERVIZI -->
+  <section class="servizi">
+    <div class="container">
+      <h2 class="section-title">I Servizi della Struttura</h2>
+      <div class="servizi-grid">
+        <div class="servizio-item">
+          <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/643212296.jpg?k=5529e70852fd56914f1c31ec1fd944617a5f76db856de2a525aa9c497ad4398d&o=&hp=1" alt="Camere matrimoniali con balcone e vista città">
+          <h3>Camere Climatizzate</h3>
+          <p>Due alloggi luminosi dotati di aria condizionata autonoma, TV a schermo piatto e connessione Wi-Fi.</p>
+        </div>
+        <div class="servizio-item">
+          <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/643211463.jpg?k=177641bddae71ae954eb44192f398cb5cec22340c4caa8e3a892a2a8cd86e530&o=&hp=1" alt="Bagno privato con box doccia e set cortesia">
+          <h3>Bagno con Box Doccia</h3>
+          <p>Servizi igienici con box doccia, asciugacapelli a parete e set di cortesia per ogni ospite.</p>
+        </div>
+        <div class="servizio-item">
+          <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/182029187.jpg?k=2bcc113b4b2117b764ffadd421fbddbda8b8e57aafe30c91f5e6ef54516bf365&o=&hp=1" alt="Colazione e area comune">
+          <h3>Area Comune &amp; Colazione</h3>
+          <p>Spazio condiviso con bollitore per tè, tisane, frigorifero e servizio colazione convenzionato.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. DALLA LORO PAGINA -->
+  <section class="galleria">
+    <div class="container">
+      <h2 class="section-title">Dalla Loro Pagina</h2>
+      <div class="galleria-grid">
+        <figure class="galleria-item">
+          <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/155271729.jpg?k=ad5904ac89d3b5c20e1602ff45516c7fc7a8f4ecc336efb604cb291e84fa9bd9&o=&hp=1" alt="Palazzo storico in Corso Matteotti 1 ad Iglesias">
+          <figcaption>Ingresso del palazzo storico in Corso Matteotti 1, nel cuore pedonale di Iglesias.</figcaption>
+        </figure>
+        <figure class="galleria-item">
+          <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/646229963.jpg?k=471498836ad4632909d715efea5ee372a6404cb873ab13d21fc9dd0301075862&o=&hp=1" alt="Balcone con affaccio sul centro storico">
+          <figcaption>Balcone privato affacciato sulle vie e sui tetti caratteristici del centro cittadino.</figcaption>
+        </figure>
+        <figure class="galleria-item">
+          <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/646229635.jpg?k=3e752495856240c2841e51ba8cc8e095a0a70e122e0e9e15c99d44eb65ab1656&o=&hp=1" alt="Dettaglio biancheria e cuscini">
+          <figcaption>Preparazione delle stanze con biancheria da letto coordinata e materassi matrimoniali.</figcaption>
+        </figure>
+        <figure class="galleria-item">
+          <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/646230376.jpg?k=b6e55cc218130419c18b0456b830597a936b50caf12b039b834ca5edc48a2c26&o=&hp=1" alt="Elementi d arredo e dettagli d epoca">
+          <figcaption>Dettagli dell'arredamento in legno e atmosfera tranquilla all'interno della struttura.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. INFO PRATICHE -->
+  <section class="info">
+    <div class="container">
+      <h2 class="section-title">Informazioni Pratiche</h2>
+      <div class="info-box">
+        <div class="info-col">
+          <h3>Posizione e Contatti</h3>
+          <ul class="info-list">
+            <li><strong>Indirizzo:</strong> Corso Matteotti 1, 09016 Iglesias (SU)</li>
+            <li><strong>Zona:</strong> Centro storico pedonale, vicino a Piazza Sella</li>
+            <li><strong>Telefono / WhatsApp:</strong> +39 366 952 4375</li>
+            <li>
+              <a class="maps-link" href="https://maps.google.com/?q=Corso+Matteotti+1+Iglesias" target="_blank" rel="noopener">Apri la posizione su Google Maps &rarr;</a>
+            </li>
+          </ul>
+        </div>
+        <div class="info-col">
+          <h3>Dotazioni &amp; Soggiorno</h3>
+          <ul class="info-list">
+            <li><strong>Capacità:</strong> 2 camere indipendenti con vista</li>
+            <li><strong>Connettività:</strong> Rete Wi-Fi inclusa</li>
+            <li><strong>Climatizzazione:</strong> Impianto autonomo caldo / freddo</li>
+            <li><strong>Dotazioni:</strong> TV satellitare, phon, set biancheria</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CTA FINALE IDENTICO -->
+  <section class="cta-finale">
+    <div class="container">
+      <h2>Verifica Disponibilità</h2>
+      <p>Per richiedere date disponibili e informazioni sul soggiorno, scrivi direttamente su WhatsApp.</p>
+      <a class="cta-btn" href="https://wa.me/393669524375?text=Salve,%20vorrei%20informazioni%20sulla%20disponibilit%C3%A0%20delle%20camere%20al%20B%26B%20Del%20Corso">Scrivici su WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>B&amp;B Del Corso • Corso Matteotti 1, Iglesias (SU) • Tel. +39 366 952 4375</p>
+    </div>
+  </footer>
+
+</body>
+</html>
